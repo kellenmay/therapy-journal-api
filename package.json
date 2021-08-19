@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@auth0/auth0-react": "^1.6.0"
+    "@auth0/auth0-react": "^1.6.0",
+    "postgres": "^1.0.2"
   }
 }

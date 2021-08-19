@@ -21,6 +21,7 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+
 development:
   <<: *default
   database: therapy_journal_api_development
@@ -84,3 +85,5 @@ production:
   database: therapy_journal_api_production
   username: therapy_journal_api
   password: <%= ENV['THERAPY_JOURNAL_API_DATABASE_PASSWORD'] %>
+
+

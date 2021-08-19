@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+Entry.create(title: 'Entry 1', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+Entry.create(title: 'Entry 2', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+Entry.create(title: 'Entry 3', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+Entry.create(title: 'Entry 4', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+        
