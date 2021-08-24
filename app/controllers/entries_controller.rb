@@ -24,7 +24,7 @@ class EntriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /entries/1
+  # PATCH/PUT /entries/1  
   def update
     if @entry.update(entry_params)
       render json: @entry
@@ -46,6 +46,7 @@ class EntriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def entry_params
+      byebug
       params.require(:entry).permit(:title, :body, :emotion, :user_id, :journal_id)
     end
 end

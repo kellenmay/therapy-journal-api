@@ -8,8 +8,7 @@
 
 
 
-Entry.create(title: 'Entry 1', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
-Entry.create(title: 'Entry 2', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
-Entry.create(title: 'Entry 3', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
-Entry.create(title: 'Entry 4', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
-        
+Entry.create(id: 0, title: 'Entry 1', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+Entry.create(id: 1, title: 'Entry 2', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+Entry.create(id: 2, title: 'Entry 3', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+Entry.create(id: 3, title: 'Entry 4', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
