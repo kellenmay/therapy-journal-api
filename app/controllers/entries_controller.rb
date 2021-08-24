@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
   # POST /entries
   def create
     @entry = Entry.new(entry_params)
-
+  
     if @entry.save
       render json: @entry, status: :created, location: @entry
     else
@@ -46,7 +46,6 @@ class EntriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def entry_params
-      byebug
       params.require(:entry).permit(:title, :body, :emotion, :user_id, :journal_id)
     end
 end
