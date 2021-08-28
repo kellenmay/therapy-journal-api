@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'login/create'
   resources :users
   resources :journals
   resources :entries
