@@ -8,7 +8,13 @@
 
 
 
-Entry.create(title: 'Entry 1', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
-Entry.create(title: 'Entry 2', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
-Entry.create(title: 'Entry 3', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
-Entry.create(title: 'Entry 4', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+# Entry.create(title: 'Entry 1', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+# Entry.create(title: 'Entry 2', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+# Entry.create(title: 'Entry 3', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+# Entry.create(title: 'Entry 4', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+
+
+# Entry.create(title: 'Entry 5', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+# Entry.create(title: 'Entry 6', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+# Entry.create(title: 'Entry 7', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
+# Entry.create(title: 'Entry 8', body: 'Dear Diary', emotion: 7, user_id: 1, journal_id: 1)
