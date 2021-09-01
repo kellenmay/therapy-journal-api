@@ -1,30 +1,27 @@
 class ApplicationController < ActionController::API
-    private
-    def token(user_id)
-      payload = { user_id: user_id }
-      JWT.encode(payload, hmac_secret, 'HS256')
-    end
-  
-    def hmac_secret
-      ENV["GOOGLE_CLIENT_SECRET"]
-    end
-  
-    def client_has_valid_token?
-      !!current_user_id
-    end
-  
-    def current_user_id
-      begin
-        token = request.headers["Authorization"]
-        decoded_array = JWT.decode(token, hmac_secret, true, { algorithm: 'HS256' })
-        payload = decoded_array.first
-      rescue #JWT::VerificationError
-        return nil
-      end
-      payload["user_id"]
-    end
-  
-    def require_login
-      render json: {error: 'Unauthorized'}, status: :unauthorized if !client_has_valid_token?
-    end
+  def encode_token(payload)
+    JWT.encode(payload, 'secret')
   end
+
+  def auth_header_token
+    request.headers['Authorization'].split(' ')[1]
+ end
+
+ def session_user
+      decoded_hash = decoded_token
+      if !decoded_hash.empty?
+        user_id = decoded_hash[0]["user_id"]
+        user = User.find_by(id: user_id)
+      end
+  end
+
+ def decoded_token
+      if auth_header_token
+         begin
+           JWT.decode(auth_header_token, 'secret',true, algorithm: 'HS256')
+         rescue JWT::DecodeError
+            []
+          end
+      end
+ end
+end

@@ -36,6 +36,7 @@ class EntriesController < ApplicationController
   # DELETE /entries/1
   def destroy
     @entry.destroy
+    render json: @entry
   end
 
   private
