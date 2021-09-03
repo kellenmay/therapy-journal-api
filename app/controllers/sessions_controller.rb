@@ -9,9 +9,8 @@ class SessionsController < ApplicationController
   end
   
   def create
-    user = User.find_by(user: params[:email][:password])
+    user = User.find_by_email(params[:email])
     byebug
-
     if user && user.authenticate(params[:email][:password])
         payload = {user_id: user.id}
         token = encode_token(payload)

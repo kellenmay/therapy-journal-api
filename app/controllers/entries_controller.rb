@@ -2,9 +2,13 @@ class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :update, :destroy]
 
   # GET /entries
-  def index
-    @entries = Entry.all
-
+  def index 
+    if params[:user_id]
+      @user = User.find_by_id(params[:user_id])
+      @entries = @user.entries
+    else
+      @entries = Entry.all
+    end 
     render json: @entries
   end
 
